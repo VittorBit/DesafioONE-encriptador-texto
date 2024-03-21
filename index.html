@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa de encriptador de texto</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <main>
+    <section class="ventana-texto">
+
+      <div class="poner-texto">
+
+        <div class="tablaImagen-encriptador">
+          <img id="fondo-encriptador" class="fondo-encriptador" src="imagenes/Fondo-Encriptador.png"
+            alt="Logo de encriptador de texto" />
+        </div>
+      
+        <textarea id="caja" class="caja" placeholder="Ingresa el texto aquí"></textarea>
+      
+        <div class="validacion-terminos">
+          <img id="exclamacion-Cierre" class="exclamacion-Cierre" src="imagenes/Signo-Exclamación-DeCierre.png"
+            alt=" Signo de exclamacion de cierre" />
+          <p>Solo letras minúsculas y sin acentos.</p>
+        </div>
+    
+        <div class="botones-texto">
+          <input class="boton-encriptar" id= "boton-encriptar" type="button" value="Encriptar" onclick="botonEncriptar()" />
+          <button class="boton-desencriptar" id= "boton-desencriptar" type="button" onclick="botonDesencriptar()">
+          Desencriptar</button>
+        </div>
+        
+      </div>
+    </section> 
+
+    <section  class="ventana-ingresar">
+      <div class="principal-ingreso">
+        <div class="ventana-encriptada">
+      
+          <div class="imagen-encriptador">
+            <img id="fondoDePersona-Listo" class="fondoDePersona-Listo" src="imagenes/FondoDePersona-Listo.png"
+              alt="Imagen de inicio del encriptador" />
+          </div>
+      
+          <div class="mensaje-encriptado" id="mensaje-encriptado">
+            <h2 id="titulo-mensaje" class="titulo-mensaje">Ningún mensaje fue encontrado</h2>
+            <p id="parrafo" class="parrafo">Ingresa el texto que deseas encriptar o desencriptar</p>
+          </div>
+      
+          <div class="ventana-copiar">
+            <input class="boton-copiar" type="button" value="Copiar" onclick="botonCopiar()" />
+          </div>
+      
+          <div class="ventana-resultado">
+            <p class="copiar-texto"></p>
+          </div>
+      
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="Encriptador.js"></script>
+
+</body>
+
+</html>

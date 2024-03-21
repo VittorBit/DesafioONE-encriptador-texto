@@ -1,0 +1,369 @@
+
+
+/* --- Iniciamos con estilizar la pagina de index.html --- */
+
+  .ventana-texto {
+    position: absolute;
+    width: 100%; /* Funciona solo con absolute */
+    /* width: 100vw; <- VW significa Viewport Width (ancho del dispositivo)*/
+    height: 100%; /* Funciona solo con absolute */
+    /* height:100vh; <- representaría el 100% de la altura de la ventana gráfica o la altura completa de la pantalla */
+    background:#f3f5fc;
+  }
+
+  .tablaImagen-encriptador{
+    position: absolute;
+    left: 1%;
+    top: 3%;
+
+  }
+
+  .fondo-encriptador{
+    width: 80px;
+    height: 65px;
+  }
+
+  /* Le colocamos estilos de ancho y altura respectivamente al elemento textarea llamado "caja" */
+
+  .caja {
+    position: absolute;
+    width: 42%;
+    height: 65%;
+    left: 12%;
+    top: 13%;
+    border: none;
+    resize: none;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    background-color: #f3f5fc;
+  }
+  
+  .caja::placeholder {
+    color: #0a3871;
+  }
+  
+  .caja:focus,
+  .caja:active {
+    border: none;
+    outline: none;
+  }
+  
+  .validacion-terminos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+    position: absolute;
+    width: 80%;
+    left: 12%;
+    top: 79%;
+  }
+
+  .exclamacion-Cierre {
+    width: 15px;
+    height: 15px;
+    opacity: 0.7;
+  }
+  
+  .validacion-terminos p  {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: #495057;
+    opacity: 0.8;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }
+  
+  .botones-texto {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 1% 0;
+    position: absolute;
+    width: 80%;
+    left: 12%;
+    top: 82%;
+  }
+  
+  .boton-encriptar {
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    gap: 8px;
+    width: 25%;
+    background-color: #0a3871;
+    border-radius: 24px;
+    font-family: "Inter";
+    font-size: 18px;
+    line-height: 19px;
+    text-align: center;
+    color: #fff;
+    margin: 0 20px 0 0;
+  }
+  
+  .boton-desencriptar {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2%;
+    gap: 8px;
+    width: 25%;
+    background: #d8dfe8;
+    border: 1px solid #0a3871;
+    border-radius: 24px;
+    font-family: "Inter";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 19px;
+    text-align: center;
+    color: #0a3871;
+  }
+  
+  .boton-encriptar:hover,
+  .boton-desencriptar:hover {
+    margin: 0.3%;
+    width: 24.5%;
+    padding: 1.8%;
+  }
+  
+  .ventana-encriptada {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 30%;
+    height: 90%;
+    left: 60%;
+    top: 5%;
+    background: #fff;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+  }
+  
+  .mensaje-encriptado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+    gap: 16px;
+    position: absolute;
+    width: 100%;
+    top: 56%;
+    text-align: center;
+  }
+  
+  .mensaje-encriptado h2 {
+    width: 60%;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 80%;
+    text-align: center;
+    color: #343a40;
+  }
+  
+  .mensaje-encriptado p {
+    width: 80%;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 75%;
+    text-align: center;
+    color: #495057;
+  }
+  
+  .ventana-encriptada img {
+    position: absolute;
+    width: 80%;
+    height: 50%;
+    top: 8%;
+    right: 10%;
+  }
+
+  .ventana-resultado{
+    position: absolute;
+    top: 10%;
+    bottom: 0%;
+    width: 80%;
+    height: 70%;
+    padding: 0;
+    box-sizing: border-box;
+    display: none;
+}
+
+.ventana-resultado p{
+    color: #495057;
+    font-size: 25px;
+}
+
+.ventana-copiar{
+    display: flex;
+    position: absolute;
+    bottom: 0%;
+    width: 80%;
+    top: 80%;
+    display: none;
+}
+
+.boton-copiar{
+    width: 90%;
+    height: 50%;
+    border-radius: 24px;
+    background-color: #ffffff;
+    color: #0A3871;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+    border: 1px solid #0A3871;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    top: 20%;
+    left:5%;
+}
+
+.ocultar{
+  display: none;
+}
+
+
+  /* --- Configuramos el Diseño responsivo - Responsive design ---- */
+
+  @media screen and (max-width: 650px) {
+
+    .ventana-texto {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .poner-texto{
+      max-width: 100%;
+    }
+
+    .tablaImagen-encriptador{
+      width: 100%;
+      height: 8%;
+      left: 0%;
+      top: 0%;
+    }
+
+    .fondo-encriptador{
+      width: 45px;
+      height: 30px;
+      margin: 12px 0 12px 15px;
+    }
+
+    .caja {
+      width: 80%;
+      height: 42%;
+      left: 10%;
+      top: 9%;
+      font-size: 16px;
+    }
+
+    .validacion-terminos {
+      width: 80%;
+      left: 10%;
+      top: 52%;
+    }
+
+    .validacion-terminos p {
+      font-size: 14px;
+    }
+
+    .botones-texto {
+      width: 80%;
+      left: 10%;
+      top: 57%;
+    }
+
+    .boton-encriptar,
+    .boton-desencriptar{
+      width: 48%;
+      border-radius: 16px;
+    }
+
+    .boton-encriptar:hover,
+    .boton-desencriptar:hover {
+      margin: 0.3%;
+      width: 47.5%;
+      padding: 1.8%;
+    }
+    
+    .ventana-encriptada {
+      width: 80%;
+      height: 25%;
+      left: 10%;
+      top: 66%;
+    }
+
+    .mensaje-encriptado {
+      width: 100%;
+      top: 25%;
+    }
+
+    .mensaje-encriptado h2{
+      font-size: 16px;
+      width: 80%;
+    }
+
+    .mensaje-encriptado p{
+      font-size: 12px;
+      width: 86%;
+    }
+
+    .imagen-encriptador img {
+      top: 0;
+      display: none;
+      visibility: hidden;
+    }
+
+    .ventana-resultado{
+      top: 6%;
+      display: none;
+  }
+  
+    .ventana-resultado p {
+      color: #495057;
+      font-size: 12px;
+    }
+  
+    .ventana-copiar {
+      display: flex;
+      position: absolute;
+      bottom: 0%;
+      width: 80%;
+      top: 65%;
+      display: none;
+    }
+  
+    .boton-copiar {
+      width: 80%;
+      height: 30%;
+      border-radius: 12px;
+      background-color: #ffffff;
+      color: #0A3871;
+      font-size: 12px;
+      font-weight: 400;
+      text-align: center;
+      font-family: 'Inter', sans-serif;
+      border: 1px solid #0A3871;
+      cursor: pointer;
+      position: relative;
+      top: 45%;
+      left: 10%;
+    }
+  
+  }
